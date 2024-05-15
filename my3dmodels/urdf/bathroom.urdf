@@ -1,0 +1,262 @@
+<?xml version="0.0" ?>
+<robot name="bathroom">
+  <link name="baseLink">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0.0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bathroom/wall2.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bathroom/wall2.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall1" type="fixed">
+    <origin rpy="0 0 3.1415" xyz="2.61 1.7 1.1"/>
+    <parent link="baseLink"/>
+    <child link="wall1"/>
+  </joint>
+    <link name="wall1">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bathroom/wall1.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bathroom/wall1.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+    <joint name="washing" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="baseLink"/>
+    <child link="washing"/>
+  </joint>
+    <link name="washing">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0.0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bathroom/washing.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bathroom/washing.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+      <joint name="washing2" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="baseLink"/>
+    <child link="washing2"/>
+  </joint>
+    <link name="washing2">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0.0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bathroom/washing2.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bathroom/washing2.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+        <joint name="bath_toilet" type="fixed">
+    <origin rpy="0 0 0" xyz="0. 0. 0"/>
+    <parent link="baseLink"/>
+    <child link="bath_toilet"/>
+  </joint>
+    <link name="bath_toilet">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0.0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bathroom/bath_toilet.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bathroom/bath_toilet.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+          <joint name="taps" type="fixed">
+    <origin rpy="0 0 0" xyz="0. 0. 0"/>
+    <parent link="baseLink"/>
+    <child link="taps"/>
+  </joint>
+    <link name="taps">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0.0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bathroom/taps.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bathroom/taps.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+          <joint name="objs" type="fixed">
+    <origin rpy="0 0 0" xyz="0. 0. 0"/>
+    <parent link="baseLink"/>
+    <child link="objs"/>
+  </joint>
+    <link name="objs">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0.0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bathroom/objs.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bathroom/objs.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+          <joint name="objs2" type="fixed">
+    <origin rpy="0 0 0" xyz="0. 0. 0"/>
+    <parent link="baseLink"/>
+    <child link="objs2"/>
+  </joint>
+    <link name="objs2">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0.0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bathroom/objs2.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bathroom/objs2.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+</robot>
+

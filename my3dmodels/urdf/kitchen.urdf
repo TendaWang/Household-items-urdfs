@@ -1,0 +1,170 @@
+<?xml version="0.0" ?>
+<robot name="kitchen">
+  <link name="baseLink">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0.04"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.04"/>
+      <geometry>
+        <mesh filename="meshes/kitchen/wall.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.04"/>
+      <geometry>
+	 	<mesh filename="meshes/kitchen/wall.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <joint name="obj1" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="baseLink"/>
+    <child link="obj1"/>
+  </joint>
+    <link name="obj1">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/kitchen/obj1.obj" />
+      </geometry>
+      <material name="sofa">
+        <color rgba="0.9 0.9 0.9 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/kitchen/obj1.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <joint name="obj2" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="baseLink"/>
+    <child link="obj2"/>
+  </joint>
+    <link name="obj2">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/kitchen/obj2.obj" />
+      </geometry>
+      <material name="o2">
+        <color rgba="0 0. 0. 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/kitchen/obj2.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="floor" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="baseLink"/>
+    <child link="refrigerator"/>
+  </joint>
+    <link name="refrigerator">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/kitchen/refrigerator.obj" />
+      </geometry>
+      <material name="refrigerator">
+        <color rgba="0.02 0.15 0.02 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/kitchen/refrigerator.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+  <joint name="tap" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="baseLink"/>
+    <child link="tap"/>
+  </joint>
+    <link name="tap">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/kitchen/tap.obj" />
+      </geometry>
+      <material name="sofa">
+        <color rgba="0.9 0.9 0.9 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/kitchen/tap.obj" />
+      </geometry>
+    </collision>
+  </link>
+</robot>
+

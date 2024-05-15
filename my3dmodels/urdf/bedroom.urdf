@@ -1,0 +1,386 @@
+<?xml version="0.0" ?>
+<robot name="bedroom">
+  <link name="wall1">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0.0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bedroom/wall1.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bedroom/wall1.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall1" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="wall1"/>
+    <child link="wall2"/>
+  </joint>
+    <link name="wall2">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bedroom/wall2.obj" />
+      </geometry>
+      <material name="window">
+        <color rgba="1 1 1 0.7" />
+      </material>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bedroom/wall2.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+  <joint name="wall3" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="wall1"/>
+    <child link="wall3"/>
+  </joint>
+    <link name="wall3">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bedroom/wall3.obj" />
+      </geometry>
+      <material name="glass">
+        <color rgba="1 1 1 1" />
+      </material>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bedroom/wall3.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <joint name="wall4" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="wall1"/>
+    <child link="wall4"/>
+  </joint>
+    <link name="wall4">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bedroom/wall4.obj" />
+      </geometry>
+      <material name="shelf">
+        <color rgba="0.1 0.3 0.4 1" />
+      </material>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bedroom/wall4.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall5" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="wall1"/>
+    <child link="wall5"/>
+  </joint>
+    <link name="wall5">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bedroom/wall5.obj" />
+      </geometry>
+      <material name="w">
+        <color rgba="1 1 1 1" />
+      </material>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bedroom/wall5.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+    <joint name="table1" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="wall1"/>
+    <child link="table1"/>
+  </joint>
+    <link name="table1">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bedroom/table1.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bedroom/table1.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="table2" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="wall1"/>
+    <child link="table2"/>
+  </joint>
+    <link name="table2">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bedroom/table2.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bedroom/table2.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+  <joint name="bed2" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="wall1"/>
+    <child link="bed2"/>
+  </joint>
+    <link name="bed2">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bedroom/bed2.obj" />
+      </geometry>
+      <material name="bed">
+        <color rgba="0.08 0.15 0.13 1" />
+      </material>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bedroom/bed2.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <joint name="bed1" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="wall1"/>
+    <child link="bed1"/>
+  </joint>
+    <link name="bed1">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bedroom/bed1.obj" />
+      </geometry>
+      <material name="bed1">
+        <color rgba="0.6 0.6 0.1 1" />
+      </material>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bedroom/bed1.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+  <joint name="computer" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="wall1"/>
+    <child link="computer"/>
+  </joint>
+    <link name="computer">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bedroom/computer.obj" />
+      </geometry>
+      <material name="cp">
+        <color rgba="0.9 0.9 0.9 1" />
+      </material>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bedroom/computer.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <joint name="computer2" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="wall1"/>
+    <child link="computer2"/>
+  </joint>
+    <link name="computer2">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/bedroom/computer2.obj" />
+      </geometry>
+      <material name="cp2">
+        <color rgba="0 0 0 0.95" />
+      </material>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/bedroom/computer2.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+</robot>
+

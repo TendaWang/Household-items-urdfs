@@ -1,0 +1,272 @@
+<?xml version="0.0" ?>
+<robot name="livingroom">
+  <link name="wall1">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0.0"/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/living/wall1.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/living/wall1.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall1" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="wall1"/>
+    <child link="wall2"/>
+  </joint>
+    <link name="wall2">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/living/wall2.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/living/wall2.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+    <joint name="tv" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="wall1"/>
+    <child link="tv"/>
+  </joint>
+    <link name="tv">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/living/tv.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/living/tv.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+    <joint name="table2" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 -0.4 -0.1"/>
+    <parent link="wall1"/>
+    <child link="table2"/>
+  </joint>
+    <link name="table2">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/living/table2.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/living/table2.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+    <joint name="table1" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 -0.4 0"/>
+    <parent link="wall1"/>
+    <child link="table1"/>
+  </joint>
+    <link name="table1">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 -0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/living/table1.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/living/table1.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+      <joint name="table4" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="wall1"/>
+    <child link="table4"/>
+  </joint>
+    <link name="table4">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/living/table4.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/living/table4.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+<joint name="table3" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 0 0"/>
+    <parent link="wall1"/>
+    <child link="table3"/>
+  </joint>
+    <link name="table3">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/living/table3.obj" />
+      </geometry>
+
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/living/table3.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+
+    <joint name="sofa" type="fixed">
+    <origin rpy="0 0 0" xyz=" 0 -0.4 -0.2"/>
+    <parent link="wall1"/>
+    <child link="sofa"/>
+  </joint>
+    <link name="sofa">
+    <contact>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0."/>
+       <mass value=".1"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <mesh filename="meshes/living/sofa.obj" />
+      </geometry>
+      <material name="sofa">
+        <color rgba="0.9 0.9 0.9 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0.0"/>
+      <geometry>
+	 	<mesh filename="meshes/living/sofa.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+
+
+
+
+</robot>
+
